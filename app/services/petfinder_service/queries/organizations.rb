@@ -1,6 +1,6 @@
 module PetfinderService
   module Queries
-    class SearchOrganizations
+    class Organizations
 
       def initialize(pf_client, options={})
         @client = pf_client
@@ -10,7 +10,17 @@ module PetfinderService
       end 
       
       def run
-        @client.find_shelters(@location, @options) 
+        @client.find_shelters(@location, parse_options(@options))
+      end
+
+      private
+
+      def parse_options(options)
+        if options[:limit].present?
+          options[:count] = options[:limit]
+          options.delete(:limit)
+        end
+        options
       end
 
     end

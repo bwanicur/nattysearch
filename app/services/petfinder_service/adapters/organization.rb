@@ -2,7 +2,7 @@ module PetfinderService
   module Adapters
     class Organization
 
-      PETFINDER_SHELTER_ATTS = [
+      SHELTER_ATTS = [
         :id, 
         :name, 
         :address1, 
@@ -19,28 +19,20 @@ module PetfinderService
       ]
       
       def initialize(shelter_obj)
-        @data = {}
-        PETFINDER_SHELTER_ATTS.each do |att|
-          @data[att] = shelter_obj.send(att)
-        end
+        @data = {
+          api_specific_data: {}
+        }
+        @shelter = shelter_obj
       end
       
       def atts_to_hash
-        @data[:pf_id] = pf_id
-        @data.delete(:id)
-        @data[:zipcode] = zipcode
-        @data.delete(:zip)
+        SHELTER_ATTS.each do |att|
+          @data[att] = @shelter.send(att)
+        end
+        @data[:last_updated_at] = Time.zone.now
+        @data[:api_specific_data][:pf_id] = @data.delete(:id)
+        @data[:zipcode] = @data.delete(:zip) if @data[:zip].present?
         @data
-      end
-
-      private 
-
-      def pf_id
-        @data[:id]
-      end
-
-      def zipcode
-        @data[:zip]
       end
 
     end

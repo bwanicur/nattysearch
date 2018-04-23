@@ -14,7 +14,12 @@ module PetfinderService
       res
     end
 
-    def process_pet_data(data)
+    def process_pet_data(pets)
+      res = []
+      pets.each do |pet|
+        res << PetfinderService::Adapters::Pet.new(pet).atts_to_hash
+      end
+      res
     end
 
   end

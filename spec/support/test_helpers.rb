@@ -1,13 +1,16 @@
 module TestHelpers 
-  
-  ## PETFINDER METHODS
-  
-  def pf_default_limit
-    25
+  include PetfinderTestHelpers
+
+  def default_animal_type
+    'dog'
   end
 
-  def pf_default_zipcode
+  def default_breed
+    'pitbull'
+  end
+  
+  def default_zipcode
    '92107'
   end
-
+  
 end
