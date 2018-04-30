@@ -1,6 +1,6 @@
 module PetfinderService
   module Queries
-    class OrganizationAnimals
+    class OrganizationPets
 
       PET_STAUSES = {
         adoptable: 'A',

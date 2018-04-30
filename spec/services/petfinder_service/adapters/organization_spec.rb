@@ -5,7 +5,6 @@ describe PetfinderService::Adapters::Organization do
   describe '#atts_to_hash' do
 
     it "should translate the appropriate values and delete the incompatible hash keys" do
-
       org_adapter = described_class.new(pf_shelter_double)
       hash = org_adapter.atts_to_hash
       expect(hash[:id]).to be_nil 

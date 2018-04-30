@@ -1,5 +1,5 @@
 class CreateOrganizations < ActiveRecord::Migration[5.1]
-  def change
+  def up 
     create_table :organizations do |t|
       t.timestamp :last_updated_at
       t.decimal :latitude
@@ -20,5 +20,14 @@ class CreateOrganizations < ActiveRecord::Migration[5.1]
       t.jsonb :api_specific_data
       t.timestamps
     end
+    add_index :organizations, :last_updated_at
+    add_index :organizations, :api_specific_data, using: :gin
+    execute <<-SQL
+      CREATE INDEX organizations_pf_id ON organizations((api_specific_data->>'pf_id'))
+    SQL
+  end
+
+  def down
+    drop_table :organizations
   end
 end

@@ -14,7 +14,7 @@ describe PetfinderService::Queries::Organizations do
 
     it "should return an Array of shelters based on zipcode" do
       service = described_class.new(pf_client, location: default_zipcode)
-      VCR.use_cassette 'default zipcode shelters query' do
+      VCR.use_cassette('pf_default_zipcode_shelters') do
         shelters = service.run
         expect(shelters.class.name).to eq('Array')
         expect(shelters.size).to eq(pf_default_limit)
@@ -24,7 +24,7 @@ describe PetfinderService::Queries::Organizations do
 
     it "should return an Array of shelters with limit" do
       service =  described_class.new(pf_client, location: default_zipcode, limit: 15)
-      VCR.use_cassette('shelters query 15 limit', match_requests_on: [ :method, :uri, :query ]) do
+      VCR.use_cassette('pf_shelters_15_limit', match_requests_on: [ :method, :uri, :query ]) do
         shelters = service.run
         expect(shelters.size).to eq(15)
       end
@@ -33,12 +33,12 @@ describe PetfinderService::Queries::Organizations do
     it "should return an Array of shelters given an offset and limit" do
       service = described_class.new(pf_client, location: default_zipcode, limit: 15)
       first_fifteen = nil
-      VCR.use_cassette('shelters query 15 limit', match_requests_on: [ :method, :uri, :query ]) do
+      VCR.use_cassette('pf_shelters_15_limit', match_requests_on: [ :method, :uri, :query ]) do
         first_fifteen = service.run
       end
       service = described_class.new(pf_client, location: default_zipcode, limit: 10, offset: 10)
       second_ten = nil
-      VCR.use_cassette('shelters query 10 limit 10 offset', match_requests_on: [ :method, :uri, :query ]) do
+      VCR.use_cassette('pf_shelters_10_limit_10_offset', match_requests_on: [ :method, :uri, :query ]) do
         second_ten = service.run
       end
       expect(first_fifteen[10].id).to eq(second_ten[0].id)

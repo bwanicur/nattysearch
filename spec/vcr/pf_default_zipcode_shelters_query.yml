@@ -1,0 +1,424 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.petfinder.com/shelter.find?key=afb752054145806e86da4d38721f2bb6&location=92107
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - excon/0.62.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/xml; charset=iso-8859-1
+      Date:
+      - Mon, 30 Apr 2018 01:43:19 GMT
+      Vary:
+      - Accept-Encoding
+      X-Frame-Options:
+      - SAMEORIGIN
+      Content-Length:
+      - '9825'
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <?xml version="1.0" encoding="iso-8859-1"?>
+
+        <petfinder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://api.petfinder.com/schemas/0.9/petfinder.xsd">
+         <header>
+          <version>0.1</version>
+          <timestamp>2018-04-30T01:43:19Z</timestamp>
+          <status>
+           <code>100</code>
+           <message />
+          </status>
+         </header>
+         <lastOffset>25</lastOffset>
+         <shelters>
+          <shelter>
+           <id>CA1739</id>
+           <name>Fur.Ever</name>
+           <address1 />
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92107</zip>
+           <country>US</country>
+           <latitude>32.7406</latitude>
+           <longitude>-117.2423</longitude>
+           <phone>(858) 731-6059</phone>
+           <fax />
+           <email>fur.ever@yahoo.com</email>
+          </shelter>
+          <shelter>
+           <id>CA2219</id>
+           <name>The Rescued Dog</name>
+           <address1>1220 Rosecrans St, PMB 252</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92106</zip>
+           <country>US</country>
+           <latitude>32.7285</latitude>
+           <longitude>-117.2315</longitude>
+           <phone>(619) 356-3390</phone>
+           <fax />
+           <email>info@therescueddog.org</email>
+          </shelter>
+          <shelter>
+           <id>CA803</id>
+           <name>San Diego Humane Society</name>
+           <address1>5500 Gaines Street</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92110</zip>
+           <country>US</country>
+           <latitude>32.7655</latitude>
+           <longitude>-117.1996</longitude>
+           <phone>(619) 299 -7012</phone>
+           <fax />
+           <email>info@sdhumane.org</email>
+          </shelter>
+          <shelter>
+           <id>CA978</id>
+           <name>County of San Diego Department of Animal Services</name>
+           <address1>5480 Gaines Street</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92110</zip>
+           <country>US</country>
+           <latitude>32.7655</latitude>
+           <longitude>-117.1996</longitude>
+           <phone>619-767-2675</phone>
+           <fax />
+           <email>DASInfo@sdcounty.ca.gov</email>
+          </shelter>
+          <shelter>
+           <id>CA2298</id>
+           <name>Rover's Retreat Dog Rescue</name>
+           <address1>3639 Midway Drive #B358</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92110</zip>
+           <country>US</country>
+           <latitude>32.7655</latitude>
+           <longitude>-117.1996</longitude>
+           <phone>8585295678</phone>
+           <fax />
+           <email>roversretreat.org@gmail.com</email>
+          </shelter>
+          <shelter>
+           <id>CA1453</id>
+           <name>Holly's Garden Rescue</name>
+           <address1 />
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92109</zip>
+           <country>US</country>
+           <latitude>32.7972</latitude>
+           <longitude>-117.2419</longitude>
+           <phone>858-274-2940</phone>
+           <fax />
+           <email>susan@hollysgarden.com</email>
+          </shelter>
+          <shelter>
+           <id>CA2009</id>
+           <name>The Animal Pad</name>
+           <address1 />
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92103</zip>
+           <country>US</country>
+           <latitude>32.7471</latitude>
+           <longitude>-117.1681</longitude>
+           <phone />
+           <fax />
+           <email>bk.theanimalpad@gmail.com</email>
+          </shelter>
+          <shelter>
+           <id>CA1458</id>
+           <name>Animal Rescuers Without Borders,Inc.</name>
+           <address1 />
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92171</zip>
+           <country>US</country>
+           <latitude>32.7153</latitude>
+           <longitude>-117.1564</longitude>
+           <phone />
+           <fax />
+           <email>animalrescuers@sbcglobal.net</email>
+          </shelter>
+          <shelter>
+           <id>CA1480</id>
+           <name>Animal Rescue</name>
+           <address1>P O Box 421313</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92142</zip>
+           <country>US</country>
+           <latitude>32.7153</latitude>
+           <longitude>-117.1564</longitude>
+           <phone>619 606 4500 </phone>
+           <fax />
+           <email>wizard188wizard@yahoo.com</email>
+          </shelter>
+          <shelter>
+           <id>CA1694</id>
+           <name>Parrot Education &amp; Adoption Center</name>
+           <address1>P.O.Box 600423</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92160</zip>
+           <country>US</country>
+           <latitude>32.7153</latitude>
+           <longitude>-117.1564</longitude>
+           <phone>(619) 287-8200</phone>
+           <fax />
+           <email>parroted@peac.org</email>
+          </shelter>
+          <shelter>
+           <id>CA425</id>
+           <name>Rescue House</name>
+           <address1>P.O. Box 231336</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92193</zip>
+           <country>US</country>
+           <latitude>32.7153</latitude>
+           <longitude>-117.1564</longitude>
+           <phone />
+           <fax />
+           <email>webcat@rescuehouse.org</email>
+          </shelter>
+          <shelter>
+           <id>CA886</id>
+           <name>It's The Pits</name>
+           <address1>P.O. Box 720008</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92172</zip>
+           <country>US</country>
+           <latitude>32.7153</latitude>
+           <longitude>-117.1564</longitude>
+           <phone>(858) 220-7546   </phone>
+           <fax />
+           <email>info@itsthepits.org</email>
+          </shelter>
+          <shelter>
+           <id>CA1874</id>
+           <name>California Labradors Retrievers and More</name>
+           <address1>P.O. Box 178196</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92177</zip>
+           <country>US</country>
+           <latitude>32.7153</latitude>
+           <longitude>-117.1564</longitude>
+           <phone>858-273-5386  </phone>
+           <fax />
+           <email>doginfo@labsandmore.org</email>
+          </shelter>
+          <shelter>
+           <id>CA1954</id>
+           <name>Lucky Pup Dog Rescue</name>
+           <address1>PO Box 3484</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92163</zip>
+           <country>US</country>
+           <latitude>32.7153</latitude>
+           <longitude>-117.1564</longitude>
+           <phone>(858) 945-8341</phone>
+           <fax />
+           <email>LuckyPupDogRescue@gmail.com</email>
+          </shelter>
+          <shelter>
+           <id>CA2107</id>
+           <name>Coastal K9 German Shepherd Rescue</name>
+           <address1>P.O. Box 722381</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92172</zip>
+           <country>US</country>
+           <latitude>32.7153</latitude>
+           <longitude>-117.1564</longitude>
+           <phone>858 779-9149</phone>
+           <fax />
+           <email>information@coastalgsrsd.org</email>
+          </shelter>
+          <shelter>
+           <id>CA218</id>
+           <name>San Diego House Rabbit Society</name>
+           <address1>4807 Mercury Street</address1>
+           <address2>Suite A</address2>
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92111</zip>
+           <country>US</country>
+           <latitude>32.8003</latitude>
+           <longitude>-117.171</longitude>
+           <phone>(858) 565-2869</phone>
+           <fax />
+           <email>adopt@sandiegorabbits.org</email>
+          </shelter>
+          <shelter>
+           <id>CA544</id>
+           <name>Cat AdopTion Service</name>
+           <address1 />
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92111</zip>
+           <country>US</country>
+           <latitude>32.8003</latitude>
+           <longitude>-117.171</longitude>
+           <phone>(760) 550-2287</phone>
+           <fax />
+           <email>help2014@catadoptionservice.org</email>
+          </shelter>
+          <shelter>
+           <id>CA1403</id>
+           <name>Pacific Animal Welfare Society  (PAWS of Coronado)</name>
+           <address1>PO Box 180956</address1>
+           <address2 />
+           <city>Coronado</city>
+           <state>CA</state>
+           <zip>92118</zip>
+           <country>US</country>
+           <latitude>32.6792</latitude>
+           <longitude>-117.1701</longitude>
+           <phone>(619) 437-0220</phone>
+           <fax />
+           <email>info@pawsofcoronado.org</email>
+          </shelter>
+          <shelter>
+           <id>CA2562</id>
+           <name>Coronado Veterinary Hospital</name>
+           <address1>150 Orange Ave</address1>
+           <address2 />
+           <city>Coronado</city>
+           <state>CA</state>
+           <zip>92118</zip>
+           <country>US</country>
+           <latitude>32.6792</latitude>
+           <longitude>-117.1701</longitude>
+           <phone>(619) 435-6281</phone>
+           <fax />
+           <email>info@nadovet.com</email>
+          </shelter>
+          <shelter>
+           <id>CA1356</id>
+           <name>The Barking Lot Rescue</name>
+           <address1>486 Raleigh Ave</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92117</zip>
+           <country>US</country>
+           <latitude>32.8249</latitude>
+           <longitude>-117.1978</longitude>
+           <phone>619-354-4825 </phone>
+           <fax />
+           <email>info@thebarkinglot.net</email>
+          </shelter>
+          <shelter>
+           <id>CA2501</id>
+           <name>Angels of Rawley Foundation</name>
+           <address1 />
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92117</zip>
+           <country>US</country>
+           <latitude>32.8249</latitude>
+           <longitude>-117.1978</longitude>
+           <phone />
+           <fax />
+           <email>arfadmin@angelsofrawley.org</email>
+          </shelter>
+          <shelter>
+           <id>CA1530</id>
+           <name>Labradors and Friends Dog Rescue Group</name>
+           <address1>2307 Fenton Parkway #107-160</address1>
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92108</zip>
+           <country>US</country>
+           <latitude>32.7744</latitude>
+           <longitude>-117.1339</longitude>
+           <phone>619-990-7455   </phone>
+           <fax />
+           <email>labradorsandfriends@yahoo.com</email>
+          </shelter>
+          <shelter>
+           <id>CA1780</id>
+           <name>Baja Dog Rescue</name>
+           <address1 />
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92116</zip>
+           <country>US</country>
+           <latitude>32.763</latitude>
+           <longitude>-117.1225</longitude>
+           <phone>(619) 407-9372</phone>
+           <fax />
+           <email>info@bajadogrescue.org</email>
+          </shelter>
+          <shelter>
+           <id>CA2433</id>
+           <name>Dogs Fur Days</name>
+           <address1 />
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92116</zip>
+           <country>US</country>
+           <latitude>32.763</latitude>
+           <longitude>-117.1225</longitude>
+           <phone />
+           <fax />
+           <email>info@dogsfurdays.org</email>
+          </shelter>
+          <shelter>
+           <id>CA1080</id>
+           <name>Baja Animal Sanctuary</name>
+           <address1 />
+           <address2 />
+           <city>San Diego</city>
+           <state>CA</state>
+           <zip>92102</zip>
+           <country>US</country>
+           <latitude>32.7148</latitude>
+           <longitude>-117.1182</longitude>
+           <phone>(619) 948-3199</phone>
+           <fax />
+           <email>bajadogs@aol.com</email>
+          </shelter>
+         </shelters>
+        </petfinder>
+    http_version: 
+  recorded_at: Mon, 30 Apr 2018 01:43:19 GMT
+recorded_with: VCR 4.0.0

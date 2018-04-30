@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe PetfinderService::Queries::OrganizationAnimals do
+describe PetfinderService::Queries::OrganizationPets do
 
   describe '.initialize' do
 
